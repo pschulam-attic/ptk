@@ -15,7 +15,7 @@ def predict(X, W):
 
 def _softmax(z):
     Z = np.atleast_2d(z)
-    S = logsumexp(z, axis=2)
+    S = logsumexp(z, axis=1)
     f = np.exp(Z - S[:, None])
 
     n, k = f.shape
